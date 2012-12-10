@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: DashLookup
-Bundle-SymbolicName: DashLookup;singleton:=true
+Bundle-SymbolicName: com.jkb.dashlookup;singleton:=true
 Bundle-Version: 1.0.0
 Bundle-Activator: dashlookup.Activator
 Require-Bundle: org.eclipse.ui,
