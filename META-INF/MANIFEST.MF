@@ -2,11 +2,10 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: DashLookup
 Bundle-SymbolicName: com.jkb.dashlookup;singleton:=true
-Bundle-Version: 1.0.2
+Bundle-Version: 1.0.3
 Bundle-Activator: dashlookup.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Import-Package: org.eclipse.jface.text,
- org.eclipse.ui.texteditor
+Import-Package: org.eclipse.jface.text
