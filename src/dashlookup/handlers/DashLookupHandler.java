@@ -36,7 +36,9 @@ public class DashLookupHandler extends AbstractHandler {
 			ITextEditor editor = (ITextEditor) part;
 			ISelection selection = editor.getSelectionProvider().getSelection();
 			if (selection instanceof ITextSelection) {
-				Program.launch("dash://" + ((ITextSelection) selection).getText());
+				String selectedText = ((ITextSelection) selection).getText();
+				if (!selectedText.isEmpty())
+					Program.launch("dash://" + selectedText);
 			}
 		}
 		return null;
