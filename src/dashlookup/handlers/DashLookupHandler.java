@@ -5,6 +5,7 @@ import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.swt.program.Program;
 import org.eclipse.ui.IEditorPart;
+import org.eclipse.ui.ISelectionService;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.ui.texteditor.ITextEditor;
@@ -30,11 +31,10 @@ public class DashLookupHandler extends AbstractHandler {
 	 */
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindowChecked(event);
-		IEditorPart part = window.getActivePage().getActiveEditor();
+		ISelectionService service = window.getSelectionService();
 		
-		if (part instanceof ITextEditor) {
-			ITextEditor editor = (ITextEditor) part;
-			ISelection selection = editor.getSelectionProvider().getSelection();
+		if (service != null) {
+			ISelection selection = service.getSelection();
 			if (selection instanceof ITextSelection) {
 				String selectedText = ((ITextSelection) selection).getText();
 				if (!selectedText.isEmpty())
