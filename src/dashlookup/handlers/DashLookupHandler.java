@@ -30,7 +30,7 @@ public class DashLookupHandler extends AbstractHandler {
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindowChecked(event);
 		ISelectionService service = window.getSelectionService();
-		
+
 		if (service != null) {
 			ISelection selection = service.getSelection();
 			if (selection instanceof ITextSelection) {
