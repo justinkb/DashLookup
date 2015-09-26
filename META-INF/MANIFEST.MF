@@ -2,11 +2,12 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: DashLookup
 Bundle-SymbolicName: com.jkb.dashlookup;singleton:=true
-Bundle-Version: 1.0.5
+Bundle-Version: 1.0.6
 Bundle-Activator: dashlookup.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Import-Package: org.eclipse.jface.text
+Import-Package: org.eclipse.jface.text,
+ org.eclipse.ui.texteditor
 Bundle-Vendor: Quaerendo Games
